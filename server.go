@@ -17,7 +17,7 @@ func main() {
 		fmt.Errorf("ErrParseArguments: %w\n", err)
 	}
 
-	holidays, err := app.GetDate(year)
+	holidays, err := app.GetAllHolidaysInYear(year)
 	if err != nil {
 		fmt.Errorf("ErrGetDate: %w\n", err)
 	}

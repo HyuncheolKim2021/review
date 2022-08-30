@@ -8,8 +8,8 @@ import (
 	"sort"
 )
 
-// GetDate httpリクエストで祝日をもらう (リクエスト先:https://holidays-jp.github.io/api/v1/{year}/date.json)
-func GetDate(year int) ([]string, error) {
+// GetAllHolidaysInYear httpリクエストで祝日をもらう (リクエスト先:https://holidays-jp.github.io/api/v1/{year}/date.json)
+func GetAllHolidaysInYear(year int) ([]string, error) {
 	httpClient := &http.Client{}
 
 	url := fmt.Sprintf("https://holidays-jp.github.io/api/v1/%d/date.json", year)
